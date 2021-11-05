@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body{
+    font-family: arial ,sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+.card {
+    position: relative;
+    width: 375px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.card , .card:hover.card-container {
+    cursor: pointer;
+}
+
+.card__img {
+    display:block;
+}
+
+.card:hover .card-container {
+    -webkit-transform: translate(0 , 0) ;
+            transform: translate(0 , 0) ;
+}
+
+.card-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 100px 20px ;
+    color: #fff;
+    background-color:rgba(228, 30, 30, 0.438) ;
+    -webkit-transform: translate(100% , 100%)  rotate(-360deg) ;
+            transform: translate(100% , 100%)  rotate(-360deg) ;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+}
+
+.card__title {
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 4px solid;
+    font-size: 2rem;
+}
+
+.card__paragraph {
+    margin-top: 30px;
+    line-height: 1.5;
+}
